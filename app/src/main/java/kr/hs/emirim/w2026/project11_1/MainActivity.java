@@ -16,5 +16,7 @@ public class MainActivity extends AppCompatActivity {
         grid1 = findViewById(R.id.grid1);
         GridAdapter adapter = new GridAdapter(this);
         grid1.setAdapter(adapter);
+
+
     }
 }
