@@ -11,7 +11,7 @@ import android.widget.ImageView;
 public class GridAdapter extends BaseAdapter {
     Context context;
     int[] posterIds = {R.drawable.movie1, R.drawable.movie2, R.drawable.movie3, R.drawable.movie4, R.drawable.movie5, R.drawable.movie6, R.drawable.movie7, R.drawable.movie8, R.drawable.movie9, R.drawable.movie10, R.drawable.movie1, R.drawable.movie2, R.drawable.movie3, R.drawable.movie4, R.drawable.movie5, R.drawable.movie6, R.drawable.movie7, R.drawable.movie8, R.drawable.movie9, R.drawable.movie10};
-
+    String[] posterName = {"영화1", "영화2", "영화3", "영화4", "영화5", "영화6", "영화7", "영화8", "영화9", "영화10", "영화1", "영화2", "영화3", "영화4", "영화5", "영화6", "영화7", "영화8", "영화9", "영화10"};
 
     public GridAdapter(Context context){
         this.context = context;
@@ -48,7 +48,7 @@ public class GridAdapter extends BaseAdapter {
                 View dialogView = View.inflate(context, R.layout.dialog1, null);
                 ImageView imgvLarge = dialogView.findViewById(R.id.imgv_large);
                 imgvLarge.setImageResource(posterIds[pos]);
-                dialog.setTitle("Large Poster");
+                dialog.setTitle(posterName[pos]);
                 dialog.setIcon(R.drawable.movie_icon);
                 dialog.setView(dialogView);
                 dialog.setNegativeButton("close", null);
